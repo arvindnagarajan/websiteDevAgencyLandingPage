@@ -1,0 +1,254 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+header {
+	background: rgb(35, 36, 69);
+	width: 100%;
+	display: flex;
+}
+
+.title, .nav-bar {
+	display: flex;
+}
+
+.title {
+	flex: 1;
+	padding-left: 50px;
+}
+
+.navigation {
+	flex: 1;
+}
+
+.title > h1:nth-child(1) {
+	color: orangered;
+}
+
+.title > h1:nth-child(2) {
+	padding: 0 0 0 10px;
+	color: white;
+}
+
+.title > h1:hover {
+	cursor: pointer;
+}
+
+.nav-bar {
+	list-style: none;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+.about {
+	padding-right: 50px;
+	padding-left: 50px;
+}
+
+.nav-bar > li > a {
+	text-align: center;
+	outline: none;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	transition: color 1s;
+}
+
+.nav-bar > li > a:hover {
+	color: grey;
+}
+
+aside {
+	position: absolute;
+	top: 12%;
+	background: rgb(35, 36, 69);
+	width: 100%;
+	height: 10%;
+	border-top: 2px solid orangered;
+}
+
+.subscription {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	text-align: center;
+}
+
+.text > h3 {
+	font-size: 20px;
+	color: white;
+}
+
+.button > input {
+	font-family: 'Open Sans', sans-serif;
+	height: 35px;
+	box-sizing: border-box;
+	margin: 15px 0 0 0;
+}
+
+.button > .email {
+	outline: none;
+	padding: 0 0 0 5px;
+	width: 40%;
+	margin: 0 10px 0 0;
+}
+
+.button > .subscribe {
+	border: none;
+	padding: 0 10px 0 10px;
+	background: orangered;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	transition: background 1s, color 1s;
+}
+
+.button > .subscribe:hover {
+	background: white;
+	color: black;
+}
+
+article {
+	background: lightblue;
+	position: absolute;
+	top: 22%;
+	height: 70%;
+	display: flex;
+}
+
+article > div {
+	padding: 10px 30px 0 50px;
+}
+
+.text-container {
+	flex: 70%;
+}
+
+.text-container > .text2 {
+	margin: 40px 0 0 0;
+	padding: 10px 20px;
+	background: rgb(35, 36, 69);
+	color: white;
+}
+
+.wwd {
+	flex: 30%;
+}
+
+.wwd-text {
+	background: rgb(35, 36, 69);
+	color: white;
+	padding: 15px 30px;
+	margin: 20px 0 0 0;
+}
+
+footer {
+	position: absolute;
+	top: 90%;
+	background: orangered;
+	width: 100%;
+	height: 10%;
+	text-align: center;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+
+	article {
+		height: 100%;
+	}
+
+	.text-container {
+		flex: 60%;
+	}
+
+	.wwd {
+		flex: 40%;
+	}
+
+	footer {
+		top: 120%;
+	}
+}
+
+@media screen and (max-width: 780px) {
+
+	article {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: 60% 25%;
+		height: 110%;
+	}
+
+	footer {
+		top: 130%;
+	}
+
+	.wwd {
+		margin-bottom: 50px;
+	}
+}
+
+@media screen and (max-width: 720px) {
+
+	header {
+		flex-direction: column;
+		height: 15%;
+	}
+
+	.title {
+		padding: 0;
+		justify-content: center;
+	}
+
+	.navigation {
+		padding-right: 10px;
+	}
+
+	.nav-bar {
+		margin-right: 5%;
+	}
+
+	aside {
+		top: 21%;
+	}
+
+	article {
+		top: 31%;
+		grid-template-rows: 65% 25%;
+	}
+
+	footer {
+		top: 141%;
+	}
+}
+
+@media screen and (max-width: 580px) {
+
+	aside {
+		height: 20%;
+	}
+
+	.subscription {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	article {
+		top: 41%;
+		height: 130%;
+		grid-template-rows: 60% 30%;
+		grid-row-gap: 50px;
+	}
+
+	footer {
+		top: 171%;
+	}
+}

@@ -1,0 +1,272 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+}
+
+header {
+	background: rgb(35, 36, 69);
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	border-bottom: 2px solid orangered;
+}
+
+.title, .nav-bar {
+	display: flex;
+}
+
+.title {
+	flex: 1;
+	padding: 0 0 0 50px;
+}
+
+.title > h1:nth-child(1) {
+	color: orangered;
+}
+
+.title > h1:nth-child(2) {
+	padding: 0 0 0 10px;
+	color: white;
+}
+
+.title > h1:hover {
+	cursor: pointer;
+}
+
+.navigation {
+	flex: 1;
+}
+
+.nav-bar {
+	margin-top: 30px;
+	justify-content: center;
+	align-items: center;
+	list-style: none;
+}
+
+.about {
+	padding-right: 50px;
+	padding-left: 50px;
+}
+
+.nav-bar > li > a {
+	outline: none;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	transition: color 1s;
+}
+
+.nav-bar > li > a:hover {
+	color: grey;
+}
+
+.nav-bar > li > a:active {
+	color: orangered;
+}
+
+section::before {
+	content: '';
+	position: absolute;
+	background-image: url("bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	top: 12%;
+	width: 100%;
+	height: 50%;
+	z-index: -1;
+	opacity: 0.4;
+}
+
+.text-container {
+	padding: 60px 0 0 0;
+	text-align: center;
+}
+
+.text-container > h1 {
+	font-size: 40px;
+}
+
+.text-container > p {
+	padding: 0 15px 0 15px;
+}
+
+aside {
+	position: absolute;
+	top: 62%;
+	background: rgb(35, 36, 69);
+	width: 100%;
+	height: 10%;
+}
+
+.subscription {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-content: center;
+	text-align: center;
+}
+
+.text > h3 {
+	font-size: 20px;
+	color: white;
+}
+
+.button > input {
+	font-family: 'Open Sans', sans-serif;
+	height: 35px;
+	box-sizing: border-box;
+	margin: 15px 0 0 0;
+}
+
+.button > .email {
+	outline: none;
+	padding: 0 0 0 5px;
+	width: 40%;
+	margin: 0 10px 0 0;
+}
+
+.button > .subscribe {
+	border: none;
+	padding: 0 10px 0 10px;
+	background: orangered;
+	color: white;
+	outline: none;
+	cursor: pointer;
+	transition: background 1s, color 1s;
+}
+
+.button > .subscribe:hover {
+	background: white;
+	color: black;
+}
+
+img {
+	height: 100px;
+}
+
+.container {
+	position: absolute;
+	top: 72%;
+	background: lightblue;
+	width: 100%;
+	display: flex;
+	padding: 30px 0 30px 0;
+	height: 35%;
+	text-align: center;
+}
+
+.container > div > p {
+	font-size: 14px;
+}
+
+.css3 {
+	border-right: 3px solid orangered;
+	border-left: 3px solid orangered;
+}
+
+footer {
+	position: absolute;
+	top: 115%;
+	background: orangered;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+@media screen and (max-width: 1080px) {
+
+	.container > div > p {
+		font-size: 12px;
+		padding: 0 10px 0 10px;
+	}
+}
+
+@media screen and (max-width: 875px) {
+
+
+	.text-container > h1 {
+		padding: 0 10px 0 10px;
+	}
+
+	.container {
+		flex-direction: column;
+		height: 105%;
+		width: 100%;
+	}
+
+	.container > div {
+		padding: 30px 20px 10px 20px;
+	}
+
+	.container > .css3 {
+		padding: 15px;
+		border: none;
+		border-top: 3px solid orangered;
+		border-bottom: 3px solid orangered;
+	}
+
+	footer {
+		top: 185%;
+	}
+}
+
+@media screen and (max-width: 720px) {
+
+	header {
+		flex-direction: column;
+	}
+
+	.title {
+		padding: 0;
+		justify-content: center;
+	}
+
+	.navigation {
+		padding-right: 10px;
+	}
+
+	.nav-bar {
+		margin-right: 5%;
+	}
+
+	section::before {
+		height: 70%;
+	}
+
+	aside {
+		top: 80%;
+	}
+
+	.container {
+		top: 90%;
+	}
+
+	footer {
+		top: 202%;
+	}
+}
+
+@media screen and (max-width: 580px) {
+
+	aside {
+		height: 20%;
+	}
+
+	.subscription {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+	}
+
+	.container {
+		top: 100%;
+		height: 110%;
+	}
+
+	footer {
+		top: 218%;
+	}
+}
